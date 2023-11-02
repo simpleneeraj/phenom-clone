@@ -18,7 +18,7 @@ export default async function RolePage({ params }: RolePageProps) {
   /**
    * Fetch data from API
    */
-  const data = await getAllRoles<RolesDataType[]>(params.role);
+  const data = await getAllRoles<RolesDataType[]>();
   const currentRole = data.find((item) => item.slug === params.role);
   return (
     <React.Fragment>
