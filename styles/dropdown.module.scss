@@ -61,7 +61,7 @@
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    height: 400px;
+    max-height: 400px;
     transition: all 200ms linear;
     transform: scaleY(0);
     transform-origin: top;
