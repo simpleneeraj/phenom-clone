@@ -6,6 +6,7 @@ import { getAllRoles } from '@/network';
 
 import HeroContent from '@/components/hero-content';
 import { RolesDataType } from '@/typings/roles';
+import Accordion from '@/components/accordion';
 
 type RolePageProps = {
   params: {
@@ -46,6 +47,7 @@ export default async function RolePage({ params }: RolePageProps) {
             })}
           </p>
         </div>
+        <Accordion />
       </main>
     </React.Fragment>
   );
