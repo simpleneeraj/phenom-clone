@@ -14,6 +14,25 @@ type RolePageProps = {
   };
 };
 
+import type { Metadata, ResolvingMetadata } from 'next';
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params }: RolePageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const data = await getAllRoles<RolesDataType[]>();
+  const currentRole = data.find((item) => item.slug === params.role);
+  return {
+    title: currentRole?.name,
+    description: currentRole?.content.quote,
+  };
+}
+
 export default async function RolePage({ params }: RolePageProps) {
   /**
    * Fetch data from API

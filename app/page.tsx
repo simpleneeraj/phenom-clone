@@ -7,6 +7,12 @@ import { getAllRoles } from '@/network';
 import HeroContent from '@/components/hero-content';
 import { RolesDataType } from '@/typings/roles';
 import Accordion from '@/components/accordion';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Recruiters',
+  description: `Discover, engage and hire phenomenal people — with speed and velocity.`,
+};
 
 export default async function Home() {
   /**
